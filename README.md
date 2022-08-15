@@ -70,4 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-Here is the <a href="https://luxspace-pwa-elbiz17.vercel.app/">demo</a>
+
+### Demo Project
+
+Here is the <a href="https://luxspace-pwa-elbiz17.vercel.app/" target="_blank">demo</a>
