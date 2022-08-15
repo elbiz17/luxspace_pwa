@@ -73,6 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Demo Project
 
-Here is the <a href="https://luxspace-pwa-elbiz17.vercel.app/" target="blank">demo</a>
+Here is the <a href="https://luxspace-pwa-elbiz17.vercel.app/" target="_blank">demo</a>
 
 
