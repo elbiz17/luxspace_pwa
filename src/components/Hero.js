@@ -39,7 +39,7 @@ function Hero(){
         <img
           src="./images/content/image-section.png"
           alt="hero 1"
-          className="absolute inset-0 md:relative w-full h-ful h-100 object-cover object-center"
+          className="absolute inset-0 md:relative w-full h-full object-cover object-center"
         />
       </div>
     </div>
