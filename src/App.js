@@ -15,7 +15,7 @@ function App() {
   React.useEffect(function(){
     (async function(){
       const response = await fetch(
-        'https://prod-qore-app.qorebase.io/8ySrll0jkMkSJVk/allItems/rows?limit=7&offset=0&$order=asc', 
+        'https://mocki.io/v1/be8858ee-83ff-439b-9c5a-44a2d885f29c', 
         {
         method :'GET',
         headers:{
