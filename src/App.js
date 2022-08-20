@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.js';
 import Hero from './components/Hero.js';
 import Browse from './components/Browse.js';
@@ -9,6 +10,8 @@ import AsideMenu from './components/AsideMenu.js';
 import Footer from './components/Footer.js';
 import Offline from './components/Offline.js';
 import Splash from './pages/Splash.js';
+import Profile from './pages/Profile.js';
+
 
 import './tailwind.css';
 
@@ -77,4 +80,17 @@ function App() {
   ); 
 }
 
-export default App;
+
+export default function Apps(){
+  return(
+  
+    <Router>
+      <Routes>
+        <Route exact path="/"  element={<App/>} />
+        <Route exact  path="/profile" element={<Profile/>}/>
+      </Routes>
+
+    </Router>
+
+  )
+}

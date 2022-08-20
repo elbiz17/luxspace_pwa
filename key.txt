@@ -1,0 +1,6 @@
+web push generate vapid key
+Public Key:
+BHuBOhpuL_fM-hO2F4ABkTECD0KqS_zwWYaFkHhpD4Bt5gXiXAPO4FZD-Q3SgE0fUKHXdaWdwqlE-McU6jOJNWccU6jOJNWc
+
+Private Key:
+ahSvblMpevJYlEZ4X8xnBVgwarU9a8LlJjq3s8uOM14

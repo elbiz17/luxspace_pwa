@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Header(){
    return(
    
@@ -32,9 +33,8 @@ function Header(){
                 >
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <a href="/" className="text-black md:text-white hover:underline"
-                  >Rewards</a
-                >
+                <Link to="/profile" className="text-black md:text-white hover:underline"
+                  >Profile</Link>
               </li>
             </ul>
           </div>
