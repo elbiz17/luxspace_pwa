@@ -9,8 +9,11 @@ import Clients from './components/Clients.js';
 import AsideMenu from './components/AsideMenu.js';
 import Footer from './components/Footer.js';
 import Offline from './components/Offline.js';
+import Breadcrumb from './components/Breadcrumb.js';
 import Splash from './pages/Splash.js';
 import Profile from './pages/Profile.js';
+import Details from './pages/Details.js';
+
 
 
 import './tailwind.css';
@@ -88,6 +91,7 @@ export default function Apps(){
       <Routes>
         <Route exact path="/"  element={<App/>} />
         <Route exact  path="/profile" element={<Profile/>}/>
+        <Route exact  path="/details/:id" element={<Details/>}/>
       </Routes>
 
     </Router>

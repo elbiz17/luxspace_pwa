@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Browse(){
    return(
     <section className="flex bg-gray-100 py-16 px-4" id="browse-the-room">
@@ -20,9 +21,9 @@ function Browse(){
               <h5 className="text-lg font-semibold ">Living Room</h5>
               <span className="">18.309 items</span>
             </div>
-            <a href="details.html" className="stretched-link">
+            <Link to={`/details/`} className="stretched-link">
               
-            </a>
+            </Link>
           </div>
           <div
             className="relative col-span-9 row-span-1 md:col-span-2 md:row-span-2 card"
