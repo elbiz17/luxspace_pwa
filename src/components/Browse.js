@@ -16,7 +16,7 @@ function Browse(){
                 className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
             </div>
-            <div className="overlay left-0 top-0 bottom-0 flex justify-center flex-col  pl-16 md:pl-80">
+            <div className="overlay left-0 top-0 bottom-0 flex justify-center flex-col  pl-16 lg:pl-72 md:pl-48  md:max-w-full">
               <h5 className="text-lg font-semibold ">Living Room</h5>
               <span className="">18.309 items</span>
             </div>
@@ -73,7 +73,7 @@ function Browse(){
               />
             </div>
             <div
-              className="overlay left-0 top-0 bottom-0 flex justify-center flex-col  pl-16 md:pl-80"
+              className="overlay left-0 top-0 bottom-0 flex justify-center flex-col  pl-16 lg:pl-72 md:pl-48  md:max-w-full"
             >
               <h5 className="text-lg font-semibold">Children Room</h5>
               <span className="">837 items</span>
