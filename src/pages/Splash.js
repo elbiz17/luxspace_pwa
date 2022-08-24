@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import logo from '../images/content/logo.png';
 
 function Splash(){
@@ -16,3 +17,4 @@ function Splash(){
 }
 
 export default Splash;
+

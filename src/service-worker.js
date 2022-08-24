@@ -56,66 +56,51 @@ registerRoute(
     plugins: [
       // Ensure that once this runtime cache reaches a maximum size the
       // least-recently used images are removed.
-      new ExpirationPlugin({ 
-        maxEntries: 50 
-      }),
+      new ExpirationPlugin({ maxEntries: 50 }),
     ],
   })
 );
 
-registerRoute(
-  ({ url }) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com', 
-  new NetworkFirst({
-    cacheName : 'fonts',
-    plugins : [
-      new ExpirationPlugin({
-        maxAgeSeconds: 60 * 60 * 24 * 356,
-        maxEntries: 30
-      }),
-    ],
-  })
-);
+registerRoute(({ url }) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com', new NetworkFirst({
+  cacheName: 'fonts',
+  plugins: [
+    new ExpirationPlugin({
+      maxAgeSeconds: 60 * 60 * 24 * 356,
+      maxEntries: 30
+    })
+  ]
+}));
 
+registerRoute(({ url }) => url.origin.includes("mock.io"), new NetworkFirst({
+  cacheName: 'apidata',
+  plugins: [
+    new ExpirationPlugin({
+      maxAgeSeconds: 360,
+      maxEntries: 30
+    })
+  ]
+}));
 
-registerRoute(( { url }) => /\.(jpe?g|png)$/i.test(url.pathname), 
-  new StaleWhileRevalidate({
-    cacheName : 'api-image',
-    plugins : [
-      new ExpirationPlugin({
-        maxAgeSeconds:360,
-        maxEntries : 30
-      }),
-    ],
-  })
+registerRoute(({ url }) => /\.(jpe?g|png)$/i.test(url.pathname), new StaleWhileRevalidate({
+  cacheName: 'apiimage',
+  plugins: [
+    new ExpirationPlugin({
+      maxEntries: 30
+    })
+  ]
+}));
 
-);
-
-registerRoute(({url}) => url.origin.includes("mocki.io"), 
-  new NetworkFirst({
-    cacheName : 'apidata',
-    plugins : [
-      new ExpirationPlugin({
-        maxAgeSeconds:360,
-        maxEntries : 30
-      }),
-    ],
-  }) 
-);
-
-
-
-self.addEventListener('install', function(event){
+self.addEventListener('install', function (event) {
   console.log("SW Install");
 
-  const asyncInstall= new Promise(function(resolve){
-    console.log("waiting install to finish...");
+  const asyncInstall = new Promise(function (resolve) {
+    console.log("Waiting install to finish...");
     setTimeout(resolve, 5000);
   })
-  event.waitUntil(asyncInstall);
-  
-});
 
-self.addEventListener('activate', function(event){
+  event.waitUntil(asyncInstall);
+});
+self.addEventListener('activate', function (event) {
   console.log("SW Activate");
 });
 
@@ -127,8 +112,7 @@ self.addEventListener('message', (event) => {
   }
 });
 
-
-self.addEventListener('push', function(event){
+self.addEventListener('push', function (event) {
   event.waitUntil(
     self.registration.showNotification("LuxSpace", {
       icon: "./icon-120.png",

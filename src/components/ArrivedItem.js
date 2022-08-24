@@ -1,18 +1,14 @@
-import { Link } from 'react-router-dom';
+import React, { Component }  from 'react';
 
-function numberFormat(price){
-  const currency = Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency:"IDR"
-  });
-  return currency.format(price);
-}
-function ArrivedItem({item}){
-   return(
-      <div className="px-4 relative card group">
+import { Link } from 'react-router-dom';
+import { numberFormat } from '../utils.js';
+
+function ArrivedItem({ item }) {
+  return (
+    <div className="px-4 relative card group">
       <div
         className="rounded-xl overflow-hidden card-shadow relative"
-        style={{width: '287px', height: '386px'}}
+        style={{ width: "287px", height: "386px" }}
       >
         <div
           className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -45,9 +41,11 @@ function ArrivedItem({item}){
       </div>
       <h5 className="text-lg font-semibold mt-4">{item.name}</h5>
       <span className="">{numberFormat(item.price)}</span>
-      <Link to={`/details/${item.id}`} className="stretched-link">
+      <Link to={{ pathname: `/details/${item.id}`, state: item }} className="stretched-link">
+
       </Link>
     </div>
-   )
+  )
 }
+
 export default ArrivedItem;

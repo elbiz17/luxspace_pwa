@@ -1,10 +1,12 @@
-function AsideMenu(){
-   return(
-      <section className="">
+import React, { Component }  from 'react';
+
+function AsideMenu() {
+  return (
+    <section className="">
       <div className="border-t border-b border-gray-200 py-12 mt-16 px-4">
         <div className="flex justify-center mb-8">
           <img
-            src="images/content/logo.png"
+            src="/images/content/logo.png"
             alt="Luxspace | Fulfill your house with beautiful furniture"
           />
         </div>
@@ -43,17 +45,17 @@ function AsideMenu(){
               <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                 <li>
                   <a href="/" className="hover:underline py-1 block"
-                    >Terms & Conds</a
+                  >Terms & Conds</a
                   >
                 </li>
                 <li>
                   <a href="/" className="hover:underline py-1 block"
-                    >Privacy Policy</a
+                  >Privacy Policy</a
                   >
                 </li>
                 <li>
                   <a href="/" className="hover:underline py-1 block"
-                    >For Developer</a
+                  >For Developer</a
                   >
                 </li>
               </ul>
@@ -62,7 +64,7 @@ function AsideMenu(){
               <h5 className="text-lg font-semibold mb-2 relative">
                 Special Letter
               </h5>
-              <form action="/">
+              <form action="#">
                 <label className="relative w-full">
                   <input
                     type="text"
@@ -90,7 +92,7 @@ function AsideMenu(){
         </aside>
       </div>
     </section>
-   )
+  )
 }
 
 export default AsideMenu;
